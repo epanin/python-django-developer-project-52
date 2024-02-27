@@ -10,6 +10,7 @@ packages = [{include = "task_manager"}]
 python = "^3.8.8"
 django = "4.2"
 python-dotenv = "^1.0.1"
+psycopg2-binary = "^2.9.9"
 
 
 [build-system]
