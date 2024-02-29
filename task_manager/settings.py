@@ -77,7 +77,7 @@ WSGI_APPLICATION = 'task_manager.wsgi.application'
 
 DATABASES = {
     'default': dj_database_url.config(
-        default='postgresql://postgres:postgres@localhost:5432/mysite',
+        default='postgres://dj_taskmanager_user:TkV8epFSg1vLD8rFrl71VN2EWMCM0y3v@dpg-cng305021fec73fa7p90-a/dj_taskmanager',
         conn_max_age=600
         )
 }
