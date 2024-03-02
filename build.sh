@@ -14,5 +14,5 @@ python manage.py migrate
 
 if [[ $CREATE_SUPERUSER ]];
 then
-  python manage.py createsuperuser --no-input --username panini
+  python manage.py createsuperuser --no-input --username panini --email fath34d@gmail.com
 fi
