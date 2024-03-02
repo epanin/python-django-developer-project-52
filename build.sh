@@ -17,6 +17,6 @@ python manage.py migrate
 #  python manage.py createsuperuser --no-input --username panini --email fath34d@gmail.com
 #fi
 
-python manage.py changepassword 
+python manage.py changepassword panini
 echo fyfcnfcbz84
 echo fyfcnfcbz84
