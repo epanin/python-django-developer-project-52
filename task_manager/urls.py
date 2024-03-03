@@ -19,6 +19,6 @@ from django.urls import path
 from task_manager.views import HomeView
 
 urlpatterns = [
-    path('', HomeView.as_view()),
-    path('admin/', admin.site.urls, name='home'),
+    path('', HomeView.as_view(), name='home'),
+    path('admin/', admin.site.urls),
 ]
