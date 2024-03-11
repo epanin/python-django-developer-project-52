@@ -1,18 +1,56 @@
 {% extends 'bootstrap.html' %}
 
+{# Load the tag library #}
 {% load django_bootstrap5 %}
 
+{# Load CSS and JavaScript #}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+
+{% load i18n %} 
+
 {% block bootstrap5_content %}
-    <div class="container">
-        <h1>{% block title %}(no title){% endblock %}</h1>
 
-        <ul class="nav nav-pills">
-            <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">home</a></li>
-        </ul>
+<body class="d-flex flex-column min-vh-100">
 
-        {% autoescape off %}{% bootstrap_messages %}{% endautoescape %}
+    <nav class="navbar navbar-expand-lg navbar-light bg-light ms-3">
+        <a class="navbar-brand" href="{% url 'home' %}">{% translate "Task manager" %}</a>
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarToggleExternalContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/users/">Users</a>
+                </li>
 
-        {% block content %}(no content){% endblock %}
-    </div>
+            </ul>
+            <ul class="navbar-nav">
 
+                <li class="nav-item">
+                    <a class="nav-link" href="/login/">Log in</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/users/create/">Sign in</a>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+
+    <h1>{% block title %}(no title){% endblock %}</h1>
+
+    {% autoescape off %}{% bootstrap_messages %}{% endautoescape %}
+
+    {% block content %} 
+            (no content) 
+    {% endblock %}
+
+    <footer>
+        <div class="container my-5 pt-4 border-top">
+            <a target="_blank" href="https://ru.hexlet.io">Hexlet</a>
+        </div>
+    </footer>
+
+</body>
 {% endblock %}
