@@ -26,3 +26,9 @@ shell:
 .PHONY: lint
 lint:
 	@poetry run flake8 python_django_orm_blog
+
+makemessages:
+	poetry run django-admin makemessages --ignore="static" --ignore=".env"  -l ru
+
+compilemessages:	
+	poetry run django-admin compilemessages
